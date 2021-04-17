@@ -298,7 +298,7 @@
           I am a 2020 batch Computer Science passout from DKTES Textile and Engineering Institue, Ichalkaraji. 
         </p>
         <p>
-          I am a Software Developer with professional experience in Chatbot Development, Machine Learning, Computer Vision. I am adept in Python, Rasa, Django, Flask, SQL, Machine Learning, Computer Vision. 
+          I am a Software Developer with professional experience in Chatbot Development, Machine Learning, Computer Vision. 
         </p>
       </div>
     </section>
@@ -716,7 +716,7 @@
                   <span class="card-title"><a class="teal-text hoverline">Certifications</a></span>
                 </p>
                 <ul>
-                    <li>Rasa Certfied Chatbot Developer</li>
+                    <li>Rasa Certified Chatbot Developer</li>
                     <li>Andrew Ng: Machine Learning Coursera </li>
                     <li>Deeplearning.ai - Neural Networks and Deep Learning</li>
                     <li>Deeplearning.ai - Deeplearning.ai: Improving Deep Neural Networks</li>
@@ -839,6 +839,30 @@
       </div>
     </section>
 
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="page_inbox"
+        page_id="101799851586792">
+      </div>
   </main>
 
   <!-- typed.js -->
