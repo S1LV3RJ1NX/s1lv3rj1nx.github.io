@@ -866,39 +866,46 @@
       <!-- MESSENGER END -->
 
       <!-- RASA WEBCHAT -->
-      <!-- <script>!(function () {
+      <!-- RASA WEBCHAT -->
+      <script>!(function () {
         let e = document.createElement("script"),
         t = document.head || document.getElementsByTagName("head")[0];
         (e.src =
         "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
         (e.async = !0),
-          (e.onload = () => {
-              window.WebChat.default(
-              {
-                  customData: { language: "en" },
-                  socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
-                  // add other props here
-                  title: "Know-Me-Bot",
-                  subtitle: "Ask the bot to know more about me",
-                  inputTextFieldHint: "Type your message here",
-                  hideWhenNotConnected: true,
-                  profileAvatar: "/assets/img/bot_icon_friendly.png",
-                  params:{
-                      images:{
-                          dims:{
-                              width:"300px", 
-                              height:"200px",
-                          }
-                      },
-                      storage:"session",
-                  }
-              },
-              null
+        (e.onload = () => {
+            window.WebChat.default(
+            {
+                customData: { language: "en" },
+                initPayload: "/get_started",
+                // socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
+                socketUrl: "https://mebot-core.herokuapp.com/",
+                socketPath: "/socket.io/",
+                // add other props here
+                title: "Know-Me-Bot",
+                subtitle: "Bot is deployed on heroku patience expected ",
+                inputTextFieldHint: "Type your message here",
+                hideWhenNotConnected: true,
+                profileAvatar: "/static/bot_icon_friendly.png",
+                displayUnreadCount: true,
+                params:{
+                    images:{
+                        dims:{
+                            width:"300px", 
+                            height:"300px",
+                        }
+                    },
+                    storage:"local",
+                }
+            },
+            null
             );
-          }),
-          t.insertBefore(e, t.firstChild);
-        })();
-      </script> -->
+            alert("Note: This bot is deployed on free tier version of heroku. On opening launcher, wait for bot to greet to confirm connection")
+            window.localStorage.clear();
+        }),
+        t.insertBefore(e, t.firstChild);
+    })();
+    </script>
     <!-- RASA WEBCHAT END -->
       
 
